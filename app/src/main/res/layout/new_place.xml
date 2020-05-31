@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+**********************************************************************************************************
+******************************* VERY IMPORTANT! **********************************************************
+Always add attribute android:fillViewport="true" when placing a ConstraintLayout inside a NestedScrollView
+**********************************************************************************************************
+-->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fillViewport="true">
+
+    <!--
+      Avoid focus on TextInputLayout upon activity start:
+      1. Add the following attributes on direct parent of TextInputLayout:
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      2.Add the following attributes on TextInputLayout so that the direct parent doesn't ever get the focus:
+      android:nextFocusLeft="@id/inputPlaceWrapper"
+      android:nextFocusUp="@id/inputPlaceWrapper"
+  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputPlaceWrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:nextFocusLeft="@id/inputPlaceWrapper"
+            android:nextFocusUp="@id/inputPlaceWrapper"
+            app:layout_constraintEnd_toStartOf="@+id/inputPlaceTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPlaceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textAutoComplete|textAutoCorrect"
+                android:hint="@string/enterPlaceHintText"
+                android:autofillHints="place"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/inputPlaceTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="24dp"
+            android:entries="@array/spinnerArray"
+            app:layout_constraintBottom_toBottomOf="@+id/inputPlaceWrapper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inputPlaceWrapper"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputAddressWrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/inputPlaceWrapper"
+            app:layout_constraintStart_toStartOf="@+id/inputPlaceWrapper"
+            app:layout_constraintTop_toBottomOf="@+id/inputPlaceWrapper">
+
+            <EditText
+                android:id="@+id/inputAddressView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPostalAddress|textCapWords|textAutoComplete|textAutoCorrect"
+                android:hint="@string/addressText"
+                android:autofillHints="AUTOFILL_HINT_POSTAL_ADDRESS"
+                app:layout_constraintEnd_toEndOf="@+id/inputPlaceWrapper"
+                app:layout_constraintStart_toStartOf="@+id/inputPlaceWrapper"
+                app:layout_constraintTop_toBottomOf="@+id/inputPlaceWrapper"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputPhoneWrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/inputAddressWrapper"
+            app:layout_constraintStart_toStartOf="@+id/inputAddressWrapper"
+            app:layout_constraintTop_toBottomOf="@+id/inputAddressWrapper">
+
+            <EditText
+                android:id="@+id/inputPhoneView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="@string/phoneText"
+                android:autofillHints="AUTOFILL_HINT_PHONE"
+                app:layout_constraintEnd_toEndOf="@+id/inputPhoneWrapper"
+                app:layout_constraintStart_toStartOf="@+id/inputPhoneWrapper"
+                app:layout_constraintTop_toBottomOf="@+id/inputPhoneWrapper"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputURLWrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/inputPhoneWrapper"
+            app:layout_constraintStart_toStartOf="@+id/inputPhoneWrapper"
+            app:layout_constraintTop_toBottomOf="@+id/inputPhoneWrapper">
+
+            <EditText
+                android:id="@+id/inputURLView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textUri"
+                android:hint="@string/urlText"
+                android:autofillHints="url"
+                app:layout_constraintEnd_toEndOf="@+id/inputURLWrapper"
+                app:layout_constraintStart_toStartOf="@+id/inputURLWrapper"
+                app:layout_constraintTop_toBottomOf="@+id/inputURLWrapper"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputNotesWrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/inputURLWrapper"
+            app:layout_constraintStart_toStartOf="@+id/inputURLWrapper"
+            app:layout_constraintTop_toBottomOf="@+id/inputURLWrapper">
+
+            <!-- Can't get the focus on the ratings bar working ¿? -->
+            <EditText
+                android:id="@+id/inputNotesView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autofillHints="textMultiLine|textLongMessage|textCapSentences|textAutoComplete|textAutoCorrect"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:hint="@string/notesText"
+                android:importantForAutofill="no"
+                app:layout_constraintEnd_toEndOf="@+id/inputNotesWrapper"
+                app:layout_constraintStart_toStartOf="@+id/inputNotesWrapper"
+                app:layout_constraintTop_toBottomOf="@+id/inputNotesWrapper"
+                android:nextFocusRight="@id/ratingBar"
+                android:nextFocusDown="@id/ratingBar"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/ratingBarText"
+            app:layout_constraintStart_toStartOf="@+id/inputNotesWrapper"
+            app:layout_constraintTop_toBottomOf="@+id/inputNotesWrapper" />
+
+        <!-- Can't get the focus on the ratings bar working ¿? -->
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+
+            android:nextFocusLeft="@id/inputNotesWrapper"
+            android:nextFocusUp="@id/inputNotesWrapper"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

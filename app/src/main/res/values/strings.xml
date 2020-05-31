@@ -1,0 +1,21 @@
+<resources>
+    <string name="appNameText">Mis Sitios</string>
+    <string name="settingsText">Menú</string>
+    <string name="showPlacesText">MOSTRAR LUGARES</string>
+    <string name="favouritesText">PREFERENCIAS</string>
+    <string name="aboutText">ACERCA DE</string>
+    <string name="exitText">SALIR</string>
+    <string name="enterPlaceHintText">¿Qué sitio?</string>
+    <string name="addressText">¿Dónde está?</string>
+    <string name="phoneText">¿Teléfono?</string>
+    <string name="urlText">¿Página web?</string>
+    <string name="notesText">¿Qué piensas del sitio?</string>
+    <string name="ratingBarText">¿Valoramos?</string>
+
+    <!-- Read about spinners here https://developer.android.com/guide/topics/ui/controls/spinner -->
+    <string-array name="spinnerArray">
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>Type 3</item>
+    </string-array>
+</resources>
