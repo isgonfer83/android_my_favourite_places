@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appNameText">Mis Sitios</string>
+    <string name="settingsText">Menú</string>
+    <string name="showPlacesText">MOSTRAR LUGARES</string>
+    <string name="favouritesText">PREFERENCIAS</string>
+    <string name="aboutText">ACERCA DE</string>
+    <string name="exitText">SALIR</string>
+    <string name="enterPlaceHintText">¿Qué sitio?</string>
+    <string name="addressText">¿Dónde está?</string>
+    <string name="phoneText">¿Teléfono?</string>
+    <string name="urlText">¿Página web?</string>
+    <string name="notesText">¿Qué piensas del sitio?</string>
+    <string name="ratingBarText">¿Valoramos?</string>
+
+    <string-array name="spinnerArray">
+        <item>Tipo 1</item>
+        <item>Tipo 2</item>
+        <item>Tipo 3</item>
+    </string-array>
+</resources>

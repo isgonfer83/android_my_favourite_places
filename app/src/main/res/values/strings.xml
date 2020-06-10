@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="appNameText">Mis Sitios</string>
-    <string name="settingsText">Menú</string>
-    <string name="showPlacesText">MOSTRAR LUGARES</string>
-    <string name="favouritesText">PREFERENCIAS</string>
-    <string name="aboutText">ACERCA DE</string>
-    <string name="exitText">SALIR</string>
-    <string name="enterPlaceHintText">¿Qué sitio?</string>
-    <string name="addressText">¿Dónde está?</string>
-    <string name="phoneText">¿Teléfono?</string>
-    <string name="urlText">¿Página web?</string>
-    <string name="notesText">¿Qué piensas del sitio?</string>
-    <string name="ratingBarText">¿Valoramos?</string>
+    <string name="appNameText">My Places</string>
+    <string name="settingsText">Menu</string>
+    <string name="showPlacesText">SHOW PLACES</string>
+    <string name="favouritesText">FAVOURITES</string>
+    <string name="aboutText">ABOUT</string>
+    <string name="exitText">EXIT</string>
+    <string name="enterPlaceHintText">Have a new place?</string>
+    <string name="addressText">Where?</string>
+    <string name="phoneText">Phone?</string>
+    <string name="urlText">Web?</string>
+    <string name="notesText">What do you think about this place?</string>
+    <string name="ratingBarText">Rate it?</string>
 
     <!-- Read about spinners here https://developer.android.com/guide/topics/ui/controls/spinner -->
     <string-array name="spinnerArray">

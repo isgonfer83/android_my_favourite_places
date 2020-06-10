@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ - Adding android:background="@drawable/rounded_edges" to a view will make its edges rounded
+ - More info: https://www.youtube.com/watch?v=x66x9tltEX0
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="16dp"/>
+    <solid android:color="@color/defaultButtonColour"/>
+</shape>

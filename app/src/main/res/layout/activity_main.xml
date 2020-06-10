@@ -37,8 +37,8 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--<include layout="@layout/content_main" />-->
-    <include layout="@layout/new_place" />
+    <include layout="@layout/content_main" />
+    <!-- <include layout="@layout/new_place" /> -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
