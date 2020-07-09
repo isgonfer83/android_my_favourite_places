@@ -20,19 +20,19 @@ class About : Activity() {
         aboutTextView.movementMethod = LinkMovementMethod.getInstance()
 
         // Get extras provided by launcher activity
-        val extras = intent.extras
+        //val extras = intent.extras
 
         /*
         Get each variable provided by launcher activity
             - extras? => safe call to avoid null pointer exception if extras is null
             - ?: => Elvis operator: if first expression exists, returns the value; if it doesn't, returns value of second expression
          */
-        val name = extras?.getString("name") ?: "no_name"
-        val age = extras?.getInt("age") ?: -1
+        //val name = extras?.getString("name") ?: "no_name"
+        //val age = extras?.getInt("age") ?: -1
 
         // Launched activity can return data to launcher activity
-        val intent = Intent()
-        intent.putExtra("greeting", "Hello " + name + "!")
-        setResult(Activity.RESULT_OK, intent)
+        //val intent = Intent()
+        //intent.putExtra("greeting", "Hello " + name + "!")
+        //setResult(Activity.RESULT_OK, intent)
     }
 }

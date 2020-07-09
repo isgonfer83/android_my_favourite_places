@@ -14,7 +14,8 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
-class MainActivity : AppCompatActivity(), View.OnLongClickListener{
+//class MainActivity : AppCompatActivity(), View.OnLongClickListener{
+class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,17 +61,18 @@ class MainActivity : AppCompatActivity(), View.OnLongClickListener{
         )
         */
 
-
         exitButton.setOnClickListener{
             exit(it)
         }
 
     }
 
+    /*
     override fun onLongClick(view: View?): Boolean {
         Toast.makeText(this, getToastText("Long Click", view), Toast.LENGTH_SHORT).show()
         return false
     }
+    */
 
     // Handles the onClick event on the aboutButton
     fun aboutClicked(view: View? = null){
@@ -79,15 +81,15 @@ class MainActivity : AppCompatActivity(), View.OnLongClickListener{
         val intent = Intent(this, About::class.java)
 
         // Create some extras and pass data to new activity
-        intent.putExtra("name", "John Smith")
-        intent.putExtra("age", 27)
+        //intent.putExtra("name", "John Smith")
+        //intent.putExtra("age", 27)
 
         // Launch new About activity not expecting any data to be returned
         startActivity(intent)
 
         // Launch new About activity expecting data to be returned
         // Some id is required to identify launcher activity when data is returned from launched activity
-        startActivityForResult(intent, ABOUT_INTENT_ID)
+        //startActivityForResult(intent, ABOUT_INTENT_ID)
     }
 
     private fun exit(view: View) {
@@ -98,13 +100,16 @@ class MainActivity : AppCompatActivity(), View.OnLongClickListener{
     // But first, get the name of the View v providing its id.
     // Can the View v be null?...probably not...
     // But just for the sake of learning, check that v is not null and we can get its id.
+    /*
     private fun getToastText(eventName: String, v: View?): String {
         v?.id?.let{
             return  eventName + " detected for " + resources.getResourceEntryName(it)
         } ?:
         return "View does not exist"
     }
+    */
 
+    /*
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == ABOUT_INTENT_ID && resultCode == Activity.RESULT_OK) {
@@ -112,6 +117,7 @@ class MainActivity : AppCompatActivity(), View.OnLongClickListener{
             Toast.makeText(this, greeting, Toast.LENGTH_SHORT).show()
         }
     }
+    */
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -120,11 +126,23 @@ class MainActivity : AppCompatActivity(), View.OnLongClickListener{
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        /* Handle action bar item clicks here.
+        * The action bar will automatically handle clicks on the Home/Up button, so long you specify a parent activity in AndroidManifest.xml.
+        */
+
+        /* This is basically just a switch statement which must return a Boolean value.
+        * Catches clicks on each menu item and performs some action.
+        */
         return when (item.itemId) {
-            R.id.settingsMenu -> true
+            R.id.settingsMenuOption -> {
+                Toast.makeText(this, "He pulsado Settings", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.aboutMenuOption -> {
+                // Trigger click event programatically in a view (everything inherits from View)
+                aboutButton.performClick()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Menu -->
+    <string name="settings">Configuración</string>
+    <string name="about">Acerca de...</string>
+
+
     <string name="appNameText">Mis Sitios</string>
     <string name="settingsText">Menú</string>
     <string name="showPlacesText">MOSTRAR LUGARES</string>
