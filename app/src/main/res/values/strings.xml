@@ -4,7 +4,7 @@
     <string name="settingsText">Menu</string>
     <string name="showPlacesText">SHOW PLACES</string>
     <string name="favouritesText">FAVOURITES</string>
-    <string name="aboutText">ABOUT</string>
+    <string name="aboutTitle">ABOUT</string>
     <string name="exitText">EXIT</string>
     <string name="enterPlaceHintText">Have a new place?</string>
     <string name="addressText">Where?</string>
@@ -12,6 +12,8 @@
     <string name="urlText">Web?</string>
     <string name="notesText">What do you think about this place?</string>
     <string name="ratingBarText">Rate it?</string>
+
+    <string name="aboutText">Demo app developed in an Android learning course by <a href="http://www.androidcurso.com/index.php">UPV</a> (Spain)</string>
 
     <!-- Read about spinners here https://developer.android.com/guide/topics/ui/controls/spinner -->
     <string-array name="spinnerArray">

@@ -4,7 +4,7 @@
     <string name="settingsText">Menú</string>
     <string name="showPlacesText">MOSTRAR LUGARES</string>
     <string name="favouritesText">PREFERENCIAS</string>
-    <string name="aboutText">ACERCA DE</string>
+    <string name="aboutTitle">ACERCA DE</string>
     <string name="exitText">SALIR</string>
     <string name="enterPlaceHintText">¿Qué sitio?</string>
     <string name="addressText">¿Dónde está?</string>
@@ -12,6 +12,8 @@
     <string name="urlText">¿Página web?</string>
     <string name="notesText">¿Qué piensas del sitio?</string>
     <string name="ratingBarText">¿Valoramos?</string>
+
+    <string name="aboutText">Esta app ha sido desarrollada como ejemplo en el curso de \'Android: Introducción a la Programación\' de la <a href="http://www.androidcurso.com/index.php">UPV</a> (España)</string>
 
     <string-array name="spinnerArray">
         <item>Tipo 1</item>
