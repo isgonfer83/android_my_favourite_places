@@ -27,21 +27,33 @@ Always add attribute android:fillViewport="true" when placing a ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="88dp"
             android:layout_marginEnd="32dp"
             android:text="@string/showPlacesText"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/exitText"
+            app:layout_constraintEnd_toEndOf="@+id/aboutButton"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/aboutButton"
+            app:layout_constraintTop_toBottomOf="@+id/aboutButton" />
 
         <Button
             android:id="@+id/favouritesButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/favouritesText"
             app:layout_constraintEnd_toEndOf="@+id/showPlacesButton"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/showPlacesButton"
             app:layout_constraintTop_toBottomOf="@+id/showPlacesButton" />
 
@@ -55,16 +67,6 @@ Always add attribute android:fillViewport="true" when placing a ConstraintLayout
             app:layout_constraintEnd_toEndOf="@+id/favouritesButton"
             app:layout_constraintStart_toStartOf="@+id/favouritesButton"
             app:layout_constraintTop_toBottomOf="@+id/favouritesButton" />
-
-        <Button
-            android:id="@+id/exitButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/exitText"
-            app:layout_constraintEnd_toEndOf="@+id/aboutButton"
-            app:layout_constraintStart_toStartOf="@+id/aboutButton"
-            app:layout_constraintTop_toBottomOf="@+id/aboutButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
